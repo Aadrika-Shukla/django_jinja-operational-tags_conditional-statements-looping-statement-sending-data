@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>jinja operational tags using if statements</h1>
+        {% if a > b %}
+            <h3>inside if</h3>
+            <h3>a is greater where a value is {{a}}</h3>
+        {% endif %}
+        {% if b > a %}
+            <h3>inside 2nd if</h3>
+            <h3>b is greater where b value is {{b}}</h3>
+        {% endif %}
+
+        <h1>jinja operational tags using if-else statements</h1>
+        {% if a > b %}
+            <h3>inside if</h3>
+            <h3>a is greater where a value is {{a}}</h3>
+        {% else %}
+            <h3>inside else</h3>
+            <h3>b is greater where b value is {{b}}</h3>
+        {% endif %}
+
+        <h1>jinja operational tags using if-elif else statements</h1>
+        {% if a > b  and a > c %}
+            <h3>inside if</h3>
+            <h3>a is greater where a value is {{a}}</h3>
+        {% elif b > c %}
+            <h3>inside elif</h3>
+            <h3>b is greater where b value is {{b}}</h3>
+        {% else %}
+            <h3>inside else</h3>
+            <h3>c is greater where c value is {{c}}</h3>
+        {% endif %}
+
+        <h1>jinja operational tags using nested if-else statements</h1>
+        {% if a > b  %}
+            {% if a > c %}
+                <h3>inside inner if of if</h3>
+                <h3>a is greater where a value is {{a}}</h3>
+            {% else %}
+                <h3>inside inner else of if</h3>
+                <h3>b is greater where b value is {{b}}</h3>
+            {% endif %}
+            
+        {%  else  %}
+           
+           {% if b > c %}
+             <h3>inside inner if of else</h3>
+             <h3>b is greater where a value is {{b}}</h3>
+            {% else %}
+              <h3>inside inner else of else</h3>
+              <h3>c is greater where c value is {{c}}</h3>
+            {% endif %}
+        {% endif %}
+    
+             
+    </center>
+</body>
+</html>
